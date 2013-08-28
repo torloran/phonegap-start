@@ -47,10 +47,12 @@
 			// PhoneGap is loaded and it is now safe to make calls PhoneGap methods
 			//
 			function onDeviceReady() {
-				checkConnection();	
+				navigator.notification.alert("Device is ready", unidentified, "Imporant", "OkiDoki");
+
+				//checkConnection();	
 			}
 
-			function checkConnection() {
+		 	/* function checkConnection() {
 				var networkState = navigator.network.connection.type;
 
 				var states = {};
@@ -63,7 +65,7 @@
 				states[Connection.NONE]     = 'No network connection';
 				
 				alert("problem?");
-				alert('Connection type: ' + states[networkState]);
+				alert('Connection type: ' + states[networkState]); */
 				/*var conState =  states[networkState];
 				alert("hello " + Connection.WIFI);
 				//document.getElementsByClass("connection").item(0).innerHTML = "W00T we have wifi";
