@@ -31,6 +31,7 @@
             <div id="deviceready" class="blink">
                 <p class="event listening">Connecting to Device</p>
                 <p class="event received">Ready to deliver some packages?</p>
+				<p class="event connection"></p>
             </div>
         </div>
         <script type="text/javascript" src="phonegap.js"></script>
@@ -62,6 +63,10 @@
 				states[Connection.NONE]     = 'No network connection';
 
 				alert('Connection type: ' + states[networkState]);
+				var conState =  states[networkState];
+				if (conState === Connection.WIFI) {
+					document.getElementsByClass("connection").item(0).innerHTML = "W00T we have wifi";
+				}
 			}
         </script>
     </body>
