@@ -127,7 +127,7 @@ Type: envelope</p></li></ul></li>-->
     var getAllUsers = function(){
         var query = { action : "ALL" };
         
-        server.sendJSON("http://localhost/form/json.php", query, 	callbackBoilerplate(function(response){
+        server.sendJSON("http://student.howest.be/robbe.van.der.gucht/fedex/json.php", query, 	callbackBoilerplate(function(response){
             // TODO handling of the response
             DEBUG("replied (^_^)");
             status = response['status'].toUpperCase();
