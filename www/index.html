@@ -44,10 +44,15 @@
 			// 
 			document.addEventListener("deviceready", onDeviceReady, false);
 
+			
+			function dismissed() {
+			
+			}
 			// PhoneGap is loaded and it is now safe to make calls PhoneGap methods
 			//
 			function onDeviceReady() {
-				navigator.notification.alert("Device is ready", unidentified, "Imporant", "OkiDoki");
+				console.log("THIS CODE GETS EXECUTED");
+				navigator.notification.alert("Device is ready", dismissed, "Imporant", "OkiDoki");
 
 				//checkConnection();	
 			}
