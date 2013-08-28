@@ -4,7 +4,7 @@ var server = {
         request.open("POST", url);
         request.onreadystatechange = function(){
             if (request.readyState === 4 && callback != undefined) {
-                DEBUG(request);
+                console.log(request);
                 callback(request);
             }
         };

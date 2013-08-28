@@ -9,7 +9,6 @@
 	<script type="text/javascript" src="phonegap.js"></script>
 	<script type="text/javascript" src="./js/jquery-1.7.1.min.js"></script>
 	<script type="text/javascript" src="./js/jquery.mobile-1.1.0.min.js"></script>
-	<script type="text/javascript" src="./js/DEBUG.js"></script>
 	<script type="text/javascript" src="./js/server.js"></script>
 </head> 
 
@@ -129,9 +128,9 @@ Type: envelope</p></li></ul></li>-->
         
         server.sendJSON("http://student.howest.be/robbe.van.der.gucht/fedex/json.php", query, 	callbackBoilerplate(function(response){
             // TODO handling of the response
-            DEBUG("replied (^_^)");
+            console.log("replied (^_^)");
             status = response['status'].toUpperCase();
-            DEBUG(response);
+            console.log(response);
             if ("SUCCES" === status) {
                 buildList(response['users']);
             }
@@ -166,8 +165,8 @@ Type: envelope</p></li></ul></li>-->
             var input = request.responseText;
             
             // print them for debugging purposes
-            DEBUG("Content-Type: " + type);
-            DEBUG("CONTENT: " + input);
+            console.log("Content-Type: " + type);
+            console.log("CONTENT: " + input);
          
             // do the headers give json?            
             if (type === "application/json") {
@@ -175,12 +174,12 @@ Type: envelope</p></li></ul></li>-->
                     var json_reply = JSON.parse(input);
                     func(json_reply);
                 } catch(e) {
-                    DEBUG(e.message);
-                    DEBUG("Not Actually JSON");
+                    console.log(e.message);
+                    console.log("Not Actually JSON");
                     append_error_to_html(input, type);
                 }                
             } else {
-                DEBUG("Expected JSON header");
+                console.log("Expected JSON header");
                 append_error_to_html(input, type);
             }
         });
