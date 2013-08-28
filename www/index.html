@@ -17,7 +17,7 @@
     specific language governing permissions and limitations
     under the License.
 -->
-<html>
+<!--<html>
     <head>
         <meta charset="utf-8" />
         <meta name="format-detection" content="telephone=no" />
@@ -31,56 +31,47 @@
             <div id="deviceready" class="blink">
                 <p class="event listening">Connecting to Device</p>
                 <p class="event received">Ready to deliver some packages?</p>
-				<p class="event connection">Hello thar</p>
+		<p class="event connection">Hello thar</p>
             </div>
         </div>
         <script type="text/javascript" src="phonegap.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
-            //app.initialize();
+            app.initialize();
         </script>
-        <script type="text/javascript">
-			// Wait for PhoneGap to load
-			// 
-			document.addEventListener("deviceready", onDeviceReady, false);
-
-			
-			function dismissed() {
-			
-			}
-			// PhoneGap is loaded and it is now safe to make calls PhoneGap methods
-			//
-			function onDeviceReady() {
-				var i = 10;
-				while (i--){
-					console.log("THIS CODE GETS EXECUTED");
-				}
-				
-				navigator.notification.alert("Device is ready", dismissed, "Imporant", "OkiDoki");
-
-				//checkConnection();	
-			}
-
-		 	/* function checkConnection() {
-				var networkState = navigator.network.connection.type;
-
-				var states = {};
-				states[Connection.UNKNOWN]  = 'Unknown connection';
-				states[Connection.ETHERNET] = 'Ethernet connection';
-				states[Connection.WIFI]     = 'WiFi connection';
-				states[Connection.CELL_2G]  = 'Cell 2G connection';
-				states[Connection.CELL_3G]  = 'Cell 3G connection';
-				states[Connection.CELL_4G]  = 'Cell 4G connection';
-				states[Connection.NONE]     = 'No network connection';
-				
-				alert("problem?");
-				alert('Connection type: ' + states[networkState]); */
-				/*var conState =  states[networkState];
-				alert("hello " + Connection.WIFI);
-				//document.getElementsByClass("connection").item(0).innerHTML = "W00T we have wifi";
-				alert("bye " + conState); 
-				}
-			}*/
-        </script>
+     
     </body>
+</html>-->
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<title>Single page template</title> 
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+</head> 
+
+<body> 
+
+<div data-role="page">
+
+	<div data-role="header">
+		<h1>Single page</h1>
+	</div><!-- /header -->
+
+	<div data-role="content">	
+		<p>This is a single page boilerplate template that you can copy to build your first jQuery Mobile page. Each link or form from here will pull a new page in via Ajax to support the animated page transitions.</p>		
+		<p>Just view the source and copy the code to get started. All the CSS and JS is linked to the jQuery CDN versions so this is super easy to set up. Remember to include a meta viewport tag in the head to set the zoom level.</p>
+		<p>This template is standard HTML document with a single "page" container inside, unlike a <a href="multipage-template.html" data-ajax="false">multi-page template</a> that has multiple pages within it. We strongly recommend building your site or app as a series of separate pages like this because it's cleaner, more lightweight and works better without JavaScript.</p>
+	</div><!-- /content -->
+	
+	<div data-role="footer">
+		<h4>Footer content</h4>
+	</div><!-- /footer -->
+	
+</div><!-- /page -->
+
+</body>
 </html>
