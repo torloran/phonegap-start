@@ -27,7 +27,7 @@
     </head>
     <body>
         <div class="app">
-            <h1>Delivery 02</h1>
+            <h1>Delivery 04</h1>
             <div id="deviceready" class="blink">
                 <p class="event listening">Connecting to Device</p>
                 <p class="event received">Ready to deliver some packages?</p>
@@ -37,7 +37,7 @@
         <script type="text/javascript" src="phonegap.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
-            app.initialize();
+            //app.initialize();
         </script>
         <script type="text/javascript">
 			// Wait for PhoneGap to load
@@ -51,7 +51,11 @@
 			// PhoneGap is loaded and it is now safe to make calls PhoneGap methods
 			//
 			function onDeviceReady() {
-				console.log("THIS CODE GETS EXECUTED");
+				var i = 100;
+				while (i--){
+					console.log("THIS CODE GETS EXECUTED");
+				}
+				
 				navigator.notification.alert("Device is ready", dismissed, "Imporant", "OkiDoki");
 
 				//checkConnection();	
